@@ -1,0 +1,43 @@
+
+.icons{
+    display: flex;
+    position: relative;
+    top:-15px;
+    justify-content: center;
+    align-self:  center;
+    column-gap: 25px;
+    .icon{
+        display: inline-flex;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        outline: 2px solid #fff;
+        transition-property:
+        outline-offset, outline-color, background-color;
+        transition-duration: 0.25s;
+        &:hover{
+            outline-offset: 4px;
+        }
+        & i{
+            margin: auto;
+            font-size: 1.4rem;
+            &:hover{
+                animation:shake 0.25s;
+            }
+        }
+    }
+}
+@keyframes shake{
+    10%{
+        transform: rotate(15deg);
+    }
+    20%{
+        transform: rotate(-15deg); 
+    }
+    30%{
+        transform: rotate(15deg);
+    }
+    40%{
+        transform: rotate(-15deg);  
+    }
+}

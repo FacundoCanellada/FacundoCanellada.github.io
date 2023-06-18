@@ -75,6 +75,48 @@ button:hover {
     font-size: 1.4rem;
   }
 }
+.icons {
+  display: flex;
+  position: relative;
+  top: -15px;
+  justify-content: center;
+  align-self: center;
+  column-gap: 25px;
+}
+.icons .icon {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  outline: 2px solid #fff;
+  transition-property: outline-offset, outline-color, background-color;
+  transition-duration: 0.25s;
+}
+.icons .icon:hover {
+  outline-offset: 4px;
+}
+.icons .icon i {
+  margin: auto;
+  font-size: 1.4rem;
+}
+.icons .icon i:hover {
+  animation: shake 0.25s;
+}
+
+@keyframes shake {
+  10% {
+    transform: rotate(15deg);
+  }
+  20% {
+    transform: rotate(-15deg);
+  }
+  30% {
+    transform: rotate(15deg);
+  }
+  40% {
+    transform: rotate(-15deg);
+  }
+}
 header {
   display: flex;
   justify-content: space-between;
@@ -319,7 +361,6 @@ header .lista {
 }
 .redes .discord i {
   font-size: 2rem;
-  background-color: rgb(32, 165, 180);
   padding: 7px;
   border: 1px solid aliceblue;
   border-radius: 30px;
@@ -327,44 +368,7 @@ header .lista {
   transition: all 0.5s ease-in-out;
 }
 .redes .discord i:hover {
-  transform: scale(1);
-  width: 70px;
-  height: 50px;
-  background-color: rgba(17, 18, 75, 0.8941176471);
-  border: 2px solid rgb(255, 0, 183);
-  box-shadow: 2px 2px 2px rgb(255, 0, 183);
-}
-.redes .social {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  line-height: 10px;
-}
-.redes .social .social-lista {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  text-align: center;
-  gap: 25px;
-  margin-right: 15px;
-}
-.redes .social .social-lista .social-element {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1rem;
-  background-color: rgb(32, 165, 180);
-  padding: 10px;
-  border: 1px solid aliceblue;
-  border-radius: 40%;
-  box-shadow: 1px 1px 1px rgba(240, 248, 255, 0.545);
-  transition: all 0.5s ease-in-out;
-}
-.redes .social .social-lista .social-element:hover {
-  transform: scale(1.1);
-  background-color: rgba(17, 18, 75, 0.8941176471);
-  border: 2px solid rgb(255, 0, 183);
-  box-shadow: 2px 2px 2px rgb(255, 0, 183);
+  animation: shake 0.25s;
 }
 
 @media (min-width: 480px) {
