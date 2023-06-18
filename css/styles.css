@@ -619,29 +619,25 @@ header .lista {
 }
 .novedades #contentItemsCarrusel .itemCarrusel .tarjetaCarrusel {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  padding: 18px;
   height: 100%;
   font-size: 1.7rem;
   font-family: fantasy;
+  filter: brightness(0.7);
 }
 .novedades #contentItemsCarrusel .itemCarrusel .tarjetaCarrusel a {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
   color: white;
+  position: absolute;
+  top: 0px;
 }
-.novedades #contentItemsCarrusel #tarjeta1 {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/proyectoResponsive/img/zelda.jpg);
-  background-size: cover;
-  background-position: center center;
-}
-.novedades #contentItemsCarrusel #tarjeta2 {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/proyectoResponsive/img/spiderman2.png);
-  background-size: cover;
-  background-position: center center;
-}
-.novedades #contentItemsCarrusel #tarjeta3 {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/proyectoResponsive/img/starfield.jpg);
-  background-size: cover;
-  background-position: center center;
+.novedades #contentItemsCarrusel .itemCarrusel .tarjetaCarrusel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .novedades #contentItemsCarrusel .flechasCarrusel {
   display: flex;
