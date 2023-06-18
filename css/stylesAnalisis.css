@@ -1,0 +1,581 @@
+* {
+    margin: 0;
+    border:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul,ol{
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+body{
+    color: aliceblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-image: url(/img/fondo.jpg);
+    background-size:cover;
+    background-position: center center;
+}
+/* RESETEO CSS */
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 70px;
+    padding: 10px;
+    margin: 7px;
+    background: #11124be4;
+    border: 1px solid rgb(32, 165, 180);
+    border-radius: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.portada{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    width: 70%;
+
+    font-size: 0.9rem;
+    margin: 10px;
+    gap: 10px;
+    padding: 2px;
+}
+.portada i{
+    font-size: 1.5rem;
+}
+.logo{
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+}
+.checkbtn{
+    display: block;
+    cursor: pointer;
+}
+header ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #11124be4;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+    line-height: 100px;
+    font-size: 2rem;
+}
+header nav ul li{
+    display: block;
+    margin: 50px 0;
+}
+header nav ul li a{
+    font-size: 20px;
+}
+li a:hover, li a.active{
+    background: none;
+    color: rgb(255, 0, 183);
+    margin: 20px;
+}
+#check:checked ~ ul{
+    left:0;
+}
+.menu{
+    display: none;
+}
+.lista{
+    display: fixed;
+    margin-right: 10px;
+    border: 1px solid rgb(32, 165, 180);
+    border-radius: 20px;
+    height: 100%;
+    width: 95%;
+    margin-left: 2.5%;
+}
+/* CABECERA DE LA PAGINA */
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px;
+    margin: 5px;
+    background-color: #11124be4;
+    border: 1px solid rgb(32, 165, 180);
+    border-radius: 10px;
+}
+.nav ul li{
+    display: flex;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    line-height: 40px;
+    padding: 5px;
+    font-size: 0.5rem;
+    text-transform: uppercase;
+}
+nav li a:hover, li a.active2{
+    background: none;
+    color: rgb(37, 162, 190);
+}
+
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: cene;
+    width: 50px;
+    padding: 15px;
+}
+.login-inicio{
+    display: none;
+}
+
+/* BARRAS NAVEGABLES */
+.tarjetas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(24, 9, 93, 0.526);
+    border: 1px solid rgb(32, 165, 180);
+    border-radius: 10px;
+
+    padding: 20px;
+    gap: 25px;
+    margin: 10px;
+}
+.tarjetas h2{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    font-size: 0.8rem;
+    padding: 5px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.tarjeta1{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.259),
+    rgb(0 0 0 / .5)), url(../img/re4-analisis.jpg);
+    background-size: cover;
+    background-position: center;
+
+    padding: 10px;
+    height: 40vh;
+    width: 80vw;
+    gap: 7px;
+    border: 1px solid #f5f5f5ae;
+    border-radius: 10px;
+}
+.tarjeta1:hover{
+    transform: scale(1.1);
+    transition: ease-in-out 0.5s;
+    width: 95%;
+}
+.tarjeta1 h3{
+    font-size: 1.0rem;
+}
+.tarjeta1 span{
+    font-size: 0.8rem;
+}
+.tarjeta1 p{
+    font-size: 0.7rem;
+}
+
+.tarjeta2{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.518),
+    rgb(0 0 0 / .5)), url(../img/gollum.jpeg);
+    background-size: cover;
+    background-position: center;
+
+    padding: 10px;
+    height: 40vh;
+    width: 80vw;
+    gap: 7px;
+    border: 1px solid #f5f5f5ae;
+    border-radius: 10px;
+}
+.tarjeta2:hover{
+    transform: scale(1.1);
+    transition: ease-in-out 0.5s;
+    width: 95%;
+}
+.tarjeta2 h3{
+    font-size: 1.0rem;
+}
+.tarjeta2 span{
+    font-size: 0.8rem;
+}
+.tarjeta2 p{
+    font-size: 0.7rem;
+}
+/* MAIN, CONTENIDO PRINCIPAL DE LA PAGINA */
+.redes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+
+    color: rgb(32, 165, 180);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 15px;
+    margin: 10px;
+    border: 1px solid rgb(32, 165, 180);
+    border-radius: 20px 50px;
+    background-color: #11124be4;
+}
+.discord{
+    display: grid;
+    grid-template-columns: 2fr 1fr1 fr;
+    grid-template-rows: 30% 30% 30%;
+    gap: 6px;
+
+}
+.discord h3{
+    font-size: 1.5rem;
+}
+.discord i{
+    font-size: 2.0rem;
+    background-color:rgb(32, 165, 180);
+    padding: 7px;
+    border: 1px solid aliceblue;
+    border-radius: 30px;
+    box-shadow: 1px 1px 1px rgba(240, 248, 255, 0.545);
+    transition: all 0.5s ease-in-out;
+}
+.discord i:hover{
+    transform: scale(1.0);
+    width: 70px;
+    height: 50px;
+    background-color: #11124be4;
+    border: 2px solid rgb(255, 0, 183);
+    box-shadow: 2px 2px 2px rgb(255, 0, 183);
+}
+.discord p{
+    padding: 10px;
+}
+.social{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    line-height: 20px;
+
+}
+.social-lista{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    gap: 20px;
+}
+.social-element{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.0rem;
+    background-color: rgb(32, 165, 180);
+    padding: 10px;
+    border: 1px solid aliceblue;
+    border-radius: 40%;
+    box-shadow: 1px 1px 1px rgba(240, 248, 255, 0.545);
+    transition: all 0.5s ease-in-out;
+
+}
+.social-element:hover{
+    transform: scale(1.0);
+    width: 50px;
+    height: 50px;
+    background-color: #11124be4;
+    border: 2px solid rgb(255, 0, 183);
+    box-shadow: 2px 2px 2px rgb(255, 0, 183);
+}
+/* FOOTER, SECCION DE REDES */
+@media(min-width:480px) {
+    .portada{
+        font-size: 1.2rem;
+    }
+    .checkbtn i{
+        font-size: 1.5rem;
+    }
+    /* CABECERA */
+
+    .nav ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        padding: 10px;
+    }
+    .nav ul li{
+        font-size: 0.8rem;
+    }
+    /* BARRAS NAVEGABLES, PLATAFORMAS Y LOGIN */
+
+    .noticias-principal{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .buscador{
+        font-size: 1.5rem;
+    }
+    .titulo-terciario{
+        font-size: 1.3rem;
+    }
+    /* SECCION NOTICIAS */
+    .discord{
+        font-size: 1.2rem;
+    }
+    .discord i{
+        font-size: 2.5rem;
+    }
+    .social-element{
+        font-size: 1.7rem;
+    }
+    /* FOOTER, REDES SOCIALES */
+}
+/* VERSION DE MOVIL HORIZONTAL */
+
+@media(min-width:768px) {
+    .portada{
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        font-size: 1.1rem;
+    }
+    .lista{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        height: 10%;
+        width: 60%;
+        top: 20px;
+        left: 35%;
+        background:none;
+        gap: 5px;
+        border: none;
+        position: absolute;
+        transition: none;
+    }
+    .lista li{
+        font-size: 1.4rem;
+        display: inline-block;
+        line-height: 30px;
+        gap: 30px;
+        background-color: none;
+        font-size: 1.2rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        transition: none;
+    }
+    .menu{
+        display: none;
+    }
+    .check{
+        display: none;
+    }
+    .checkbtn{
+        display: none;
+    }
+    li a.active, li a:hover{
+        color: rgb(183, 14, 135);
+        padding: 5px;
+        border: 1px solid rgb(183, 14, 135);
+        border-radius: 10%;
+        transition: .5s;
+    }
+    /* CABECERA */
+
+    .nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .login{
+        gap: 15px;
+    }
+    .login i{
+        font-size: 1.5rem;
+    }
+    .login-inicio{
+        display: flex;
+        font-size: 1.0rem;
+        display: inline-block;
+        white-space: nowrap;
+    }
+    .login-inicio:hover{
+        transition: 0.5s;
+        color: #120e2ee4;
+        background:rgb(183, 14, 135);
+        padding: 5px;
+        border-radius: 25px;
+    }
+    /* BARRAS NAVEGABLES */
+    .tarjetas h2{
+        font-size: 1.3rem;
+    }
+    .tarjeta1{
+        display: flex;
+        justify-content: end;
+        text-align: end;
+        margin: 15px;
+        height: 50vh;
+    }
+    .tarjeta1:hover{
+        color: rgb(32, 165, 180);
+        width: 90%;
+    }
+    .tarjeta1 h3{
+        font-size: 1.1rem;
+    }
+    .tarjeta1 span{
+        font-size: 1.2rem;
+    }
+    .tarjeta1 p{
+        font-size: 0.9rem;
+    }
+    .tarjeta2{
+        display: flex;
+        justify-content: end;
+        text-align: end;
+        margin: 15px;
+        height: 50vh;
+    }
+    .tarjeta2:hover{
+        color: rgb(32, 165, 180);
+        width: 90%;
+    }
+    .tarjeta2 h3{
+        font-size: 1.1rem;
+    }
+    .tarjeta2 span{
+        font-size: 1.2rem;
+    }
+    .tarjeta2 p{
+        font-size: 0.9rem;
+    }
+}
+@media(min-width: 1024px){
+    .portada h1 {
+        font-size: 2.1rem;
+    }
+    .portada i{
+        font-size: 2.5rem;
+    }
+    .lista{
+        display: flex;
+        justify-content: center;
+        top: 25px;
+        gap: 10px;
+    }
+    .lista a{
+        font-size: 1.4rem;
+    }
+    /* CABECERA */
+    .nav{
+        display: flex;
+        justify-content: space-between;
+    }
+    .nav li a:hover{
+        color: rgb(183, 14, 135);
+    }
+    .plataformas li a{
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        font-size: 1.2rem;
+        width: 60%;
+        padding: 0px;
+        margin: 0px;
+        border: none;
+    }
+    .login{
+        display: flex;
+        position: absolute;
+        top: 120px;
+        right: 80px;
+    }
+    .login-inicio{
+        font-size: 1.3rem;
+    }
+    /* BARRAS DE NAVEGACION */
+
+    .tarjetas{
+        display: flex;
+        flex-direction: row;
+        height: 80vh;
+        
+    }
+    .tarjetas h2{
+        font-size: 1.7rem;
+    }
+    .tarjetas h2:hover{
+        color: rgb(183, 14, 135);
+        transition: all 0.5s;
+    }
+    .tarjetas-titulo{
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 210px;
+        gap: 100px;
+        margin: 10px;
+        
+    }
+    .tarjeta1{
+        height: 80%;
+        width: 50%;
+        position: relative; 
+        top: 50px;
+        margin: 20px;
+    }
+    .tarjeta2{
+        height: 80%;
+        width: 50%;
+        position: relative; 
+        top: 50px;
+        margin: 20px;
+    }
+    .tarjetas span{
+        font-size: 1.0rem;
+    }
+    /* MAIN, CONTENIDO PRINCIPAL DE LA PAGINA */
+    .redes{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .discord{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .discord i{
+        display: flex;
+        width: 100%;
+    }
+    .discord i:hover{
+        transform: scale(1.2);
+        width: 100%;
+        height: 65px;
+        background-color: #11124be4;
+        border: 2px solid rgb(255, 0, 183);
+        box-shadow: 2px 2px 2px rgb(255, 0, 183);
+    }
+}
