@@ -1,0 +1,39 @@
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    padding: 15px;
+    .login-inicio{
+        display: none;
+    }
+}
+@media(min-width:768px){
+    .login{
+        gap: 15px;
+        & i{
+            font-size: 1.5rem;
+        }
+        .login-inicio{
+            display: flex;
+            font-size: 1.0rem;
+            display: inline-block;
+            white-space: nowrap;
+            &:hover{
+                transition: 0.5s;
+                color: #120e2ee4;
+                background:rgb(183, 14, 135);
+                padding: 5px;
+                border-radius: 25px;
+            }
+        }
+    }
+}
+@media(min-width: 1024px){
+    .login{
+        .login-inicio{
+            font-size: 1.4rem;
+        }
+    }
+}

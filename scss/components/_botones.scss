@@ -1,0 +1,17 @@
+button{
+    background-color: #11124be4;
+    color: aliceblue;  
+    padding: 5px;
+    border-radius: 20px;
+    box-shadow: 0px 1px 1px 0px rgb(255, 0, 183);
+    font-size: 0.9rem;
+    &:hover{
+        transition: all 0.5s;
+        transform: scale(1.1);
+    }
+}
+@media(min-width:768px){
+    button{
+        font-size: 1.3rem;
+    }
+}

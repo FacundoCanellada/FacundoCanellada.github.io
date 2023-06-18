@@ -1,0 +1,148 @@
+.lista-fecha{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px;
+    margin: 5px;
+    background-color: $background-color;
+    border: 1px solid rgb(32, 165, 180);
+    border-radius: 10px;
+    & ul{
+        & li{
+            display: flex;
+            display: inline-block;
+            justify-content: center;
+            align-items: center;
+            line-height: 40px;
+            padding: 8px;
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            gap: 20px;
+            &:hover{
+                background-color: rgb(88, 41, 132);
+                color: rgb(32, 165, 180);
+                padding: 5px;
+                border: 1px solid rgb(32, 165, 180);
+                border-radius: 5px;
+                box-shadow: 1px 1px 1px rgb(88, 41, 132);
+                transition: all 0.5s;
+                cursor: pointer;
+            }
+        }
+    }
+}
+.novedades{
+    & h2{
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        background-color: $background-color;
+        margin: 5px;
+        border:1px solid rgb(88, 41, 132);
+        border-radius: 10px;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    #contentItemsCarrusel{
+        height: 70vh;
+        overflow: hidden;
+        margin: 8px;
+        border: 1px solid rgb(88, 41, 132);
+        border-radius: 5%;
+        .itemCarrusel{
+            height: 100%;
+            position: relative;
+            .tarjetaCarrusel{
+                display: flex;
+                justify-content: center;
+                padding: 18px;
+                height: 100%;
+                font-size: 1.7rem;
+                font-family: fantasy;
+                & a{
+                    color:white
+                }
+            }
+        }
+        #tarjeta1{
+            background:linear-gradient(to bottom, rgb(0 0 0 / .5),
+            rgb(0 0 0 / .5))
+            ,url(/proyectoResponsive/img/zelda.jpg);
+            background-size:cover;
+            background-position: center center;
+        }
+        #tarjeta2{
+            background:linear-gradient(to bottom, rgb(0 0 0 / .5),
+            rgb(0 0 0 / .5))
+            ,url(/proyectoResponsive/img/spiderman2.png);
+            background-size:cover;
+            background-position: center center;
+        }
+        #tarjeta3{
+            background:linear-gradient(to bottom, rgb(0 0 0 / .5),
+            rgb(0 0 0 / .5))
+            ,url(/proyectoResponsive/img/starfield.jpg);
+            background-size:cover;
+            background-position: center center;
+        }
+        .flechasCarrusel{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+        }
+    }
+}
+@media(min-width:768px) {
+    .lista-fecha{
+        display: flex;
+        justify-content:space-around;
+        gap: 100px;
+        & ul{
+            & li{
+                font-size: 1rem;
+                &:hover{
+                    transition: all 0.5s;
+                }
+            }
+        }
+    }
+}
+@media(min-width:1024px){
+    .lista-fecha{
+        gap: 200px;
+    }
+    .novedades{
+        & h2{
+            font-size: 1.8rem;
+        }
+        #contentItemsCarrusel{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 96vw;
+            background-color: rgba(88, 41, 132, 0.678);
+            .itemCarrusel{
+                width: 100%;
+                &:hover{
+                    transform: scale(1.1);
+                    transition: ease-out 0.5s;
+                }
+                & .tarjetaCarrusel{
+                    & a{
+                        position: absolute;
+                        top: 30px;
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+            .flechasCarrusel{
+                display: none;
+            }
+        }
+    }
+}

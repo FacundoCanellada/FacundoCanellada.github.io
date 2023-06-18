@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    border:0;
+    padding: 0;
+    box-sizing: border-box;
+    ul,li{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+        color: aliceblue;
+    }
+    body{
+        color: aliceblue;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-image: url(../img/fondo.jpg);
+        background-size:cover;
+        background-position: center center;
+    }
+}
+$background-color:#11124be4;

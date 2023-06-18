@@ -1,0 +1,181 @@
+.videos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+
+    background-color: #11124be4;
+    border: 2px solid rgba(240, 248, 255, 0.545);
+    border-radius: 10px;
+    margin: 10px;
+    .videos-titulo{
+        padding: 10px;
+        font-size: 1.1rem;
+    }
+    .videos-lista{
+        display: flex;
+        flex-direction: column;
+        align-self: start;
+        justify-content: start;
+    
+        padding: 5px;
+        margin: 5px;
+        border: 1px solid rgba(240, 248, 255, 0.545);
+        border-radius: 20px;
+        .videos-elemento{
+            margin: 10px;
+            & img{
+                width: 90%;
+                height: 70%;
+                filter: brightness(0.5);
+                border-radius: 20px;
+            }
+            & i{
+                position: relative;
+                top:-8px;
+                right: 30px;
+                font-size: 1.3rem;
+            }
+            & span{
+                display: flex;
+                font-size: 1.0rem;
+            }
+            & p{
+                padding: 5px;
+            }
+        }
+    }
+    .ranking-titulo{
+        display: none;
+    }
+    .videos-ranking{
+        display: none;
+    }
+}
+@media(min-width :480px){
+    .videos{
+        .videos-titulo{
+            font-size: 1.5rem;
+        }
+        .videos-lista{
+            .videos-elemento{
+                & img{
+                    width: 93%;
+                }
+                & span{
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+}
+@media(min-width:768px){
+    .videos{
+        .videos-lista{
+            .videos-elemento{
+                & img{
+                    width: 100%;
+                }
+                & i{
+                    position: relative;
+                    top: -40px;
+                    right: -2px;
+                    font-size: 1.8rem;
+                    color: rgb(255, 0, 183);
+                }
+                & span{
+                    font-size: 1.8rem;
+                    position: relative;
+                    top: -15px;
+                }
+            }
+            &a:hover, i:hover{
+                color: rgba(240, 248, 255);
+                border: none;
+            }
+        }
+    }
+}
+@media(min-width:1024px) {
+    .videos{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 10vh 1fr;
+
+        height: 70%;
+        .videos-titulo{
+            display: gird;
+            grid-column: 1/2;
+            grid-row: 1/2;
+    
+            position: relative;
+            justify-content: center;
+            text-align: center;
+        }
+        .videos-lista{
+            display: grid;
+            grid-column: 1/2;
+            grid-row: 2/2;
+        }
+        .ranking-titulo{
+            display: block;
+            justify-self: center;
+            text-align: center;
+            position: relative;
+            top: 20px;
+            &:hover{
+                color: rgb(255, 0, 183);
+                border: 1px solid rgba(240, 248, 255, 0.545);
+                border-radius: 20px;
+                transition: 0.5s;
+                
+                padding: 10px;
+            }
+        }
+        .videos-ranking{
+            display: block;
+            display: grid;
+            grid-column: 2/2;
+            grid-row: 2/2;
+    
+            justify-content: center;
+            align-self: start;
+            border: 1px solid rgba(240, 248, 255, 0.545);
+            border-radius: 20px;
+            padding: 10px;
+            margin: 10px;
+            .ranking-elemento{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                border: 1px 1px 1px 1px solid rgb(255, 0, 183);
+                box-shadow: 0px 1px 0px 0px rgb(183, 14, 135);
+                padding: 7px;
+                gap: 5px;
+                & img{
+                    width: 100%;
+                    filter: brightness(0.5);
+                }
+                & a{
+                    position: relative;
+                    top: 15px;
+                    &:hover{
+                        color: rgb(183, 14, 135);
+                        border:none;
+                        margin: 0;
+                        padding: 0;
+                    }
+                }
+                & i{
+                    position: relative;
+                    top: -25px;
+                    left: 5px;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}

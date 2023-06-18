@@ -1,0 +1,130 @@
+.contacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $background-color;
+    border: 1px solid rgb(32, 165, 180);
+    border-radius: 10px;
+    margin: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    .contacto-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        gap:10px;
+        .contacto-elemento{
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-self: start;
+            width: 100%;
+        
+            box-shadow: 0px 1px 0px 0px rgb(255, 0, 183);
+            gap: 5px;
+            padding: 10px;
+            &:hover{
+                background-color: $background-color;
+                color: rgb(183, 14, 135);
+                border-radius: 20px;
+                box-shadow: 1px 1px 1px 1px rgb(255, 0, 183);
+                transition: 0.5s;
+            }
+            & span{
+                font-size: 1.2rem;
+            }
+            & a{
+                &:hover{
+                    color: rgb(183, 14, 135);
+                    transition: all 0.5s;
+                }
+            }
+        }
+    }
+    .formulario{
+        display:none;
+    }
+}
+@media(min-width:768px) {
+    .contacto{
+        .contacto-section{
+            .contacto-elemento span{
+                font-size: 1.7rem;
+            }
+            .contacto-elemento iframe{
+                height: 50vh;
+            }
+        }
+    }
+}
+@media(min-width:1024px) {
+    .contacto{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        text-align: center;
+        .contacto-section{
+            margin: 10px;
+            border: 1px solid rgba(240, 248, 255, 0.545);
+            border-radius: 20px;
+        }
+        .formulario{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-self: start;
+            display: block;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid rgba(240, 248, 255, 0.545);
+            border-radius: 20px;
+            height: 110vh;
+            & h2{
+                font-size: 1.5rem;
+            }
+            & form{
+                padding: 10px;
+                box-shadow: 0px 1px 1px 0px rgb(183, 14, 135);
+                &:hover{
+                    transition:ease-in-out 0.5s;
+                    color: rgb(183, 14, 135);
+                    box-shadow: 1px 1px 1px 1px rgb(183, 14, 135);
+            
+                }
+                & label{
+                    font-size: 1.4rem;
+                }
+                & input{
+                    border: 1px solid rgb(183, 14, 135);
+                    border-radius: 10px;
+                    font-size: 1.2rem;
+                    &:hover{
+                        transition: all 0.5s;
+                        background-color: $background-color;
+                        color: aliceblue;
+                        border: 1px solid aliceblue;
+                    }
+                }
+            }
+            .formulario-elemento{
+                padding: 10px;
+                gap: 20px;
+            }
+            .formulario2{
+                position: relative;
+                top: 20px;
+                height: 50%;
+                & input{
+                    height: 15vh;
+                    background-color: aliceblue;
+                }
+                & button{
+                    position: relative;
+                    top: 20px;
+                }
+            }
+        }
+    }
+}
