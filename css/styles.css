@@ -757,7 +757,7 @@ header .lista {
   font-size: 0.7rem;
 }
 .tarjetas .tarjeta1:hover {
-  transform: scale(1.1);
+  transform: scale(1);
   transition: ease-in-out 0.5s;
   width: 95%;
 }
@@ -766,7 +766,7 @@ header .lista {
   flex-direction: column;
   justify-content: end;
   align-items: end;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.702), rgba(0, 0, 0, 0.5)), url(/proyectoResponsive/img/gollum.jpeg);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.702), rgba(0, 0, 0, 0.5)), url(../img/gollum.jpeg);
   background-size: cover;
   background-position: center;
   padding: 10px;
@@ -786,7 +786,7 @@ header .lista {
   font-size: 0.7rem;
 }
 .tarjetas .tarjeta2:hover {
-  transform: scale(1.1);
+  transform: scale(1);
   transition: ease-in-out 0.5s;
   width: 95%;
 }
